@@ -1,0 +1,35 @@
+{
+  "name": "element-mold",
+  "version": "0.0.1",
+  "description": "A collection of simple HTML/SVG Element generation functions. Supports typescript!",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "element", 
+    "dsl", 
+    "dom", 
+    "html", 
+    "svg", 
+    "tag", 
+    "attribute", 
+    "style"
+  ],
+  "author": {
+    "name": "lowfront",
+    "email": "fronterior@hotmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "4.3.2"
+  },
+  "homepage": "https://github.com/lowfront/element-mold",
+  "bugs": {
+    "url": "https://github.com/lowfront/element-mold/issues"
+  }
+}

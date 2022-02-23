@@ -1,6 +1,6 @@
 {
   "name": "element-mold",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of simple HTML/SVG Element generation functions. Supports typescript!",
   "main": "dist/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
     "dist/**/*"
   ],
   "keywords": [
-    "element", 
-    "dsl", 
-    "dom", 
-    "html", 
-    "svg", 
-    "tag", 
-    "attribute", 
+    "element",
+    "dsl",
+    "dom",
+    "html",
+    "svg",
+    "tag",
+    "attribute",
     "style"
   ],
   "author": {

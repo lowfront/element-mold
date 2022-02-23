@@ -1,23 +1,34 @@
-export type CSSStylePartial = Partial<Record<keyof CSSStyleDeclaration, unknown>>;
+export type CSSStylePartial = Partial<
+  Record<keyof CSSStyleDeclaration, unknown>
+>;
 export type HTMLProperties<T> = Partial<{
-  [K in keyof T]: K extends 'style' ? CSSStylePartial : 
-    K extends 'children' ? (string | Node)[] : 
-    K extends 'class' ? string :
-    T[K];
+  [K in keyof T]: K extends "style"
+    ? CSSStylePartial
+    : K extends "children"
+    ? (string | Node)[]
+    : K extends "class"
+    ? string
+    : T[K];
 }>;
 
-export type HTMLElementTagNameMapExtra<K extends keyof HTMLElementTagNameMap> = HTMLElementTagNameMap[K] & 
-  {};
-export type SVGElementTagNameMapExtra<K extends keyof SVGElementTagNameMap> = SVGElementTagNameMap[K] & 
-  {};
+export type HTMLElementTagNameMapExtra<K extends keyof HTMLElementTagNameMap> =
+  HTMLElementTagNameMap[K] & {};
+export type SVGElementTagNameMapExtra<K extends keyof SVGElementTagNameMap> =
+  SVGElementTagNameMap[K] & {};
 
-type HTMLElementFactory<K extends keyof HTMLElementTagNameMap> = (...properties: (HTMLProperties<HTMLElementTagNameMapExtra<K>>|(string|Node)[]|string)[]) => HTMLElementTagNameMap[K];
+type HTMLElementFactory<K extends keyof HTMLElementTagNameMap> = (
+  ...properties: (
+    | HTMLProperties<HTMLElementTagNameMapExtra<K>>
+    | (string | Node)[]
+    | string
+  )[]
+) => HTMLElementTagNameMap[K];
 
 export const a: HTMLElementFactory<"a">;
 export const aTag: HTMLElementFactory<"a">;
 export const abbr: HTMLElementFactory<"abbr">;
 export const address: HTMLElementFactory<"address">;
-export const applet: HTMLElementFactory<"applet">;
+export const applet: HTMLElementFactory<any>;
 export const area: HTMLElementFactory<"area">;
 export const article: HTMLElementFactory<"article">;
 export const aside: HTMLElementFactory<"aside">;
